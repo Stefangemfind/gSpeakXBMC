@@ -32,6 +32,7 @@
                    projectFiles="false"
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
+      <itemPath>/root/NetBeansProjects/gSpeakXBMC/README.md</itemPath>
       <itemPath>/root/NetBeansProjects/gSpeakXBMC/settings.ini</itemPath>
     </logicalFolder>
   </logicalFolder>
