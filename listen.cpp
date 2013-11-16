@@ -49,7 +49,7 @@ void listen::recognize_from_microphone(){
     char const *hyp;
     char const *uttid;
     cont_ad_t *cont;
-    state = ACTIVE;
+    state = SLEEPING;
     FILE* pipe = popen(c.getValue("[General]", "Hcidump").c_str(), "r");
     std::string bufferStr;
     std::size_t found;
@@ -65,9 +65,7 @@ void listen::recognize_from_microphone(){
     if(cont_ad_calib(cont) < 0)
         E_FATAL("Failed to calibrate voice activity detection\n");
 
-    //for (;;) {
-        
-    while(!feof(pipe) || state == ACTIVE){
+    while(!feof(pipe) || state == SLEEPING){
         fgets(buffer, 128, pipe);
         bufferStr = buffer;
 
@@ -155,6 +153,7 @@ void listen::recognize_from_microphone(){
                     E_FATAL("Failed to start recording\n");
 
                 if(hyp != NULL){
+                    
                     if(hyp == c.getValue("[General]", "Sleep")){
                         state = SLEEPING;
                         s.speakThis(c.getValue("[General]", "SleepPhrase"));
@@ -165,7 +164,7 @@ void listen::recognize_from_microphone(){
                         
                         //Hack for play/pause/select
                         std::string hypStr = hyp;
-                        if(hypStr == "PLAY" || hypStr == "PAUSE" || hypStr == "SELECT"){
+                        if(hypStr == "PLAY ITEM" || hypStr == "PAUSE ITEM" || hypStr == "SELECT ITEM"){
                             state = SLEEPING;
                         }
                     }
