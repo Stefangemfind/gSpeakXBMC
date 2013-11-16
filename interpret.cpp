@@ -16,119 +16,119 @@ void interpret::parse(std::string signal){
     }
     
     //Play/Pause
-    if(signal == "PLAY" || signal == "PAUSE"){
+    if(signal == "PLAY ITEM" || signal == "PAUSE ITEM"){
         commandPlayPause();
     }
     //Stop
-    if(signal == "STOP"){
+    if(signal == "STOP ITEM"){
         commandStop();
     }
     //Select
-    if(signal == "SELECT"){
+    if(signal == "SELECT ITEM"){
         commandSelect();
     }
     //Back
-    if(signal == "BACK"){
+    if(signal == "GO BACK"){
         commandBack();
     }
     //Home
-    if(signal == "HOME"){
+    if(signal == "GO TO HOME"){
         commandHome();
     }
     //Up 1
-    if(signal == "UP ONE"){
+    if(signal == "NAVIGATE UP ONE"){
         commandUp(1);
     }
     //Up 2
-    if(signal == "UP TWO"){
+    if(signal == "NAVIGATE UP TWO"){
         commandUp(2);
     }
     //Up 3
-    if(signal == "UP THREE"){
+    if(signal == "NAVIGATE UP THREE"){
         commandUp(3);
     }
     //Up 4
-    if(signal == "UP FOUR"){
+    if(signal == "NAVIGATE UP FOUR"){
         commandUp(4);
     }
     //Up 5
-    if(signal == "UP FIVE"){
+    if(signal == "NAVIGATE UP FIVE"){
         commandUp(5);
     }
     //Up 6
-    if(signal == "UP SIX"){
+    if(signal == "NAVIGATE UP SIX"){
         commandUp(6);
     }
     //Up 7
-    if(signal == "UP SEVEN"){
+    if(signal == "NAVIGATE UP SEVEN"){
         commandUp(7);
     }
     //Up 8
-    if(signal == "UP EIGHT"){
+    if(signal == "NAVIGATE UP EIGHT"){
         commandUp(8);
     }
     //Up 9
-    if(signal == "UP NINE"){
+    if(signal == "NAVIGATE UP NINE"){
         commandUp(9);
     }
     //Up 10
-    if(signal == "UP TEN"){
+    if(signal == "NAVIGATE UP TEN"){
         commandUp(10);
     }
     //Down 1
-    if(signal == "DOWN ONE"){
+    if(signal == "NAVIGATE DOWN ONE"){
         commandDown(1);
     }
     //Down 2
-    if(signal == "DOWN TWO"){
+    if(signal == "NAVIGATE DOWN TWO"){
         commandDown(2);
     }
     //Down 3
-    if(signal == "DOWN THREE"){
+    if(signal == "NAVIGATE DOWN THREE"){
         commandDown(3);
     }
     //Down 4
-    if(signal == "DOWN FOUR"){
+    if(signal == "NAVIGATE DOWN FOUR"){
         commandDown(4);
     }
     //Down 5
-    if(signal == "DOWN FIVE"){
+    if(signal == "NAVIGATE DOWN FIVE"){
         commandDown(5);
     }
     //Down 6
-    if(signal == "DOWN SIX"){
+    if(signal == "NAVIGATE DOWN SIX"){
         commandDown(6);
     }
     //Down 7
-    if(signal == "DOWN SEVEN"){
+    if(signal == "NAVIGATE DOWN SEVEN"){
         commandDown(7);
     }
     //Down 8
-    if(signal == "DOWN EIGHT"){
+    if(signal == "NAVIGATE DOWN EIGHT"){
         commandDown(8);
     }
     //Down 9
-    if(signal == "DOWN NINE"){
+    if(signal == "NAVIGATE DOWN NINE"){
         commandDown(9);
     }
     //Down 10
-    if(signal == "DOWN TEN"){
+    if(signal == "NAVIGATE DOWN TEN"){
         commandDown(10);
     }
     //Left
-    if(signal == "LEFT"){
+    if(signal == "GO LEFT"){
         commandLeft();
     }
     //Right
-    if(signal == "RIGHT"){
+    if(signal == "GO RIGHT"){
         commandRight();
     }
     //Movies
-    if(signal == "MOVIES"){
+    if(signal == "GO TO MOVIES"){
         commandMovies();
     }
     //Tv Shows
-    if(signal == "TV SHOWS"){
+    if(signal == "GO TO TV SHOWS"){
         commandTvShows();
     }
     //Volume up
@@ -140,11 +140,11 @@ void interpret::parse(std::string signal){
         commandVolumeDown();
     }
     //Mute/Unmute
-    if(signal == "MUTE" || signal == "UNMUTE"){
+    if(signal == "MUTE ITEM" || signal == "UNMUTE ITEM"){
         commandMuteUnmute();
     }
     //Youtube
-    if(signal == "YOUTUBE"){
+    if(signal == "GO TO YOUTUBE"){
         commandYoutube();
     }
     //Seek forward
